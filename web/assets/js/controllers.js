@@ -50,7 +50,7 @@ postmanControllers.controller('CreatePostmanForm', ['$scope', '$window',
     $scope.authorization = false;
     
     Authorization.get(function(data){
-     if(data.roles != 'ROLE_ADMIN'){
+     if(data.roles == 'ROLE_ADMIN'){
         $scope.authorization = true;
         
         $scope.submit = function () {
